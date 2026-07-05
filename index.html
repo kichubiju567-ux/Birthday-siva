@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy B'day Baby🥹💋💋😘</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#ffe6ef,#ffd6e7);
+overflow-x:hidden;
+overflow-y:auto;
+}
+
+.page{
+width:100%;
+min-height:100vh;
+display:none;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:20px;
+text-align:center;
+overflow-y:auto;
+}
+
+.active{
+display:flex;
+}
+
+h1{
+color:#ff4f87;
+margin-bottom:15px;
+}
+
+h2{
+color:#ff5d95;
+margin-bottom:15px;
+}
+
+p{
+font-size:18px;
+line-height:1.6;
+}
+
+button{
+padding:12px 25px;
+border:none;
+border-radius:30px;
+background:#ff6fa7;
+color:white;
+font-size:16px;
+margin-top:20px;
+cursor:pointer;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.1);
+max-width:400px;
+}
+
+.hearts{
+position:fixed;
+inset:0;
+pointer-events:none;
+overflow:hidden;
+z-index:-1;
+}
+
+.heart{
+position:absolute;
+bottom:-20px;
+font-size:24px;
+animation:float 10s linear infinite;
+}
+
+@keyframes float{
+from{
+transform:translateY(0);
+}
+to{
+transform:translateY(-120vh);
+}
+}
+
+/* Envelope */
+
+.envelope-wrap{
+width:320px;
+height:240px;
+position:relative;
+margin:auto;
+}
+
+.letter{
+position:absolute;
+left:20px;
+bottom:20px;
+width:300px;
+height:350px;
+background:white;
+border-radius:15px;
+padding:20px;
+z-index:1;
+transition:1.5s;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+overflow-y:auto;
+}
+
+.envelope-back{
+position:absolute;
+bottom:0;
+width:100%;
+height:200px;
+background:#ffd4e5;
+border-radius:10px;
+z-index:2;
+}
+
+.envelope-front{
+position:absolute;
+bottom:0;
+width:100%;
+height:150px;
+background:#ffc2d9;
+clip-path:polygon(0 0,50% 55%,100% 0,100% 100%,0 100%);
+z-index:4;
+}
+
+.envelope-flap{
+position:absolute;
+top:0;
+width:100%;
+height:130px;
+background:#ffabc9;
+clip-path:polygon(0 0,100% 0,50% 100%);
+transform-origin:top;
+transition:1s;
+z-index:5;
+}
+
+.open .envelope-flap{
+transform:rotateX(180deg);
+opacity:0;
+}
+
+.show .letter{
+transform:translateY(-220px);
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+width:100%;
+max-width:500px;
+max-height:65vh;
+overflow:auto;
+}
+
+.gallery img{
+width:100%;
+border-radius:12px;
+}
+
+#surprise{
+display:none;
+margin-top:20px;
+font-size:20px;
+color:#ff3f82;
+font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hearts" id="hearts"></div>
+
+<!-- PAGE 1 -->
+
+<div class="page active" id="page1">
+<h1>Happy B'day Baby🥹💋💋😘</h1>
+<h3>From Ninte Kettyon ❤️</h3>
+
+<button onclick="nextPage(2)">
+Open Gift 🎁
+</button>
+</div>
+
+<!-- PAGE 2 -->
+
+<div class="page" id="page2">
+
+<div class="card">
+<h1>Happy Birthday Baby 🥹❤️</h1>
+
+<p>
+To the most beautiful part of my life ❤️
+</p>
+
+<button onclick="document.getElementById('bgm').play()">
+Play Music 🎵
+</button>
+
+<br>
+
+<button onclick="nextPage(3)">
+Next ➜
+</button>
+
+<audio id="bgm" loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+</div>
+
+<!-- PAGE 3 -->
+
+<div class="page" id="page3">
+
+<div class="card">
+
+<h2>🕰 Our Story</h2>
+
+<p>🌸 September 21 - First Time We Met</p>
+
+<p>❤️ September 30 - The Day We Proposed</p>
+
+<p>📞 Endless Conversations</p>
+
+<p>📸 Beautiful Memories Together</p>
+
+<p>🎂 Today - Happy Birthday Baby</p>
+
+<button onclick="nextPage(4)">
+Next ➜
+</button>
+
+</div>
+
+</div>
+
+<!-- PAGE 4 -->
+
+<div class="page" id="page4">
+
+<h2>💌 Open My Letter</h2>
+
+<div class="envelope-wrap" id="envelope">
+
+<div class="letter">
+<h2>💌 Love Letter</h2>
+
+<p>
+💌 My Chundhariii ❤️
+
+Happy Birthday, babyyy 🥹💋
+
+Today is all about you, but I want you to know that every day feels special to me because you're in my life. From the day we met, you slowly became my favorite person, my comfort, my happiness, and the first person I want to share everything with.
+
+Thank you for all the smiles, the late-night conversations, the silly moments, the care, and the love you've given me. You make ordinary days feel beautiful without even trying.
+
+Whenever life gets difficult, just thinking about you makes me feel stronger. Your voice, your laugh, your presence — they have become such an important part of my life.
+
+I don't know what the future holds, but one thing I know for sure is that I want to keep making memories with you, celebrating your birthdays, annoying you, loving you, and being there for you through everything.
+
+On your special day, I wish you endless happiness, good health, success, and all the love your heart can hold.
+
+Thank you for being my favorite hello and my hardest goodbye.
+
+Happy Birthday once again, my shuttumani 😚💋❤️
+
+I love you today, tomorrow, and a little more every day.
+
+❤️ Ninte Kettyon ❤️
+</p>
+
+</div>
+
+<div class="envelope-back"></div>
+<div class="envelope-front"></div>
+<div class="envelope-flap"></div>
+
+</div>
+
+<button onclick="openEnvelope()">
+Open Letter 💌
+</button>
+
+<button onclick="nextPage(5)">
+Next ➜
+</button>
+
+</div>
+
+<!-- PAGE 5 -->
+
+<div class="page" id="page5">
+
+<h2>📸 Mine🥹💋</h2>
+
+<div class="gallery">
+
+<img src="pic01.jpg">
+<img src="pic02.jpg">
+<img src="pic03.jpg">
+<img src="pic04.jpg">
+<img src="pic05.jpg">
+<img src="pic06.jpg">
+<img src="pic07.jpg">
+<img src="pic08.jpg">
+<img src="pic09.jpg">
+<img src="pic10.jpg">
+<img src="pic11.jpg">
+<img src="pic12.jpg">
+<img src="pic13.jpg">
+<img src="pic14.jpg">
+<img src="pic15.png">
+
+</div>
+
+<button onclick="showSurprise()">
+Final Surprise 🎁
+</button>
+
+<div id="surprise">
+
+<h2>💋 One Last Thing...</h2>
+
+<p>
+Mmmmmwwwwwwwwwwwwwwwwwaaaaaaaahhhhhhhhhh 😚😚😚😚😚😚😚💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋😘😘😘😘😘😘
+</p>
+
+<br>
+
+<p>
+Love youuhh more and more and moreee shuttumani 😚😚😚😚😚💋💋💋💋💋💋 ❤️♥️
+</p>
+
+</div>
+
+<script>
+
+function nextPage(page){
+
+document.querySelectorAll('.page').forEach(p=>{
+p.classList.remove('active');
+});
+
+document.getElementById('page'+page)
+.classList.add('active');
+
+}
+
+function openEnvelope(){
+
+let env=document.getElementById('envelope');
+
+env.classList.add('open');
+
+setTimeout(()=>{
+env.classList.add('show');
+},1000);
+
+}
+
+function showSurprise(){
+
+document.getElementById('surprise').style.display='block';
+
+}
+
+for(let i=0;i<30;i++){
+
+let h=document.createElement('div');
+
+h.className='heart';
+
+h.innerHTML='💖';
+
+h.style.left=Math.random()*100+'%';
+
+h.style.animationDelay=Math.random()*8+'s';
+
+h.style.fontSize=(20+Math.random()*20)+'px';
+
+document.getElementById('hearts').appendChild(h);
+
+}
+
+</script>
+
+</body>
+</html>
